@@ -15,7 +15,7 @@ def main():
   """Prompts the user for temperature and unit, performs conversion, and displays the result."""
   while True:
     try:
-      temperature = float(input("Enter temperature: "))
+      temperature = float(input("Enter the temperature to convert: "))
       unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").upper().strip()
       break
     except ValueError:
