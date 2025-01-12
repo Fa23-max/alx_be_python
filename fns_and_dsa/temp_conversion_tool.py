@@ -16,7 +16,7 @@ def main():
   while True:
     try:
       temperature = float(input("Enter temperature: "))
-      unit = input("Enter unit (C or F): ").upper().strip()
+      unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").upper().strip()
       break
     except ValueError:
       print("Invalid temperature. Please enter a numeric value.")
