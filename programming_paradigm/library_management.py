@@ -17,22 +17,22 @@ class Book:
   
 class Library:
   def __init__(self):
-    self.__books = []
+    self._books = []
 
   def add_book(self,Book):
-    self.__books.append(Book)
+    self._books.append(Book)
 
   def get_books(self):
-    return self.__books
+    return self._books
   
   def check_out_book(self,title):
-    for item in self.__books:
+    for item in self._books:
       if title == item.title:
         item.set_checkOut()
         break
   
   def return_book(self,title):
-    for item in self.__books:
+    for item in self._books:
       if title == item.title:
         if item.get_checkout():
           item.return_book()
@@ -40,7 +40,7 @@ class Library:
 
   def list_available_books(self):
     to_print = []
-    for item in self.__books:
+    for item in self._books:
       if not item.get_checkout():
         to_print.append(f"{item.title} by {item.author}")
     for str in to_print:
